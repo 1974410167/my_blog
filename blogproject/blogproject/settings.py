@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pure_pagination',
+
     # 如果在apps中自定义了app,需要注释掉之前的应用，另外写入
     # 'blog',
     'blog.apps.BlogConfig', #注册blog应用
@@ -124,8 +124,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PAGINATION_SETTINGS = {
-    'PAGE_RANGE_DISPLAYED': 4, # 分页条当前页前后应该显示的总页数（两边均匀分布，因此要设置为偶数），
-    'MARGIN_PAGES_DISPLAYED': 2, # 分页条开头和结尾显示的页数
-    'SHOW_FIRST_PAGE_WHEN_INVALID': True, # 当请求了不存在页，显示第一页
-}

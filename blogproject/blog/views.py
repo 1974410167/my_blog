@@ -9,7 +9,7 @@ from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.views.generic import ListView
 from django.contrib import messages
 from django.db.models import Q
-from pure_pagination.mixins import PaginationMixin
+
 def index(request):
     post_list=Post.objects.all().order_by('-create_time')
     return render(request,'blog/index.html',context={'post_list':post_list})
@@ -64,13 +64,7 @@ def idea(request):
 # 分页
 
 
-class MyModelListView(PaginationMixin, ListView):
-    # Important, this tells the ListView class we are paginating
-    paginate_by = 10
 
-    # Replace it for your model or use the queryset attribute instead
-    object = Post
-# 搜索
 
 def search(request):
     q = request.GET.get('q')
