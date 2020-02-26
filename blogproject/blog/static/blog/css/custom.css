@@ -107,10 +107,11 @@ img {
 
 #site-header {
 
-    padding: 25px 20px;
+    padding: 25px 0px;
     margin-bottom: 40px;
     border-bottom: 1px solid #e7e7e7;
     top: 0;
+    margin-right: 150px;
 
 }
 
